@@ -1,4 +1,5 @@
 #tictactoe
+#author callmedraken github.com/callmedraken
 
 import random
 
