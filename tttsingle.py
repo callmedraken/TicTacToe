@@ -114,7 +114,7 @@ def botCheckMove(bMove):
 		return 1
 	# left diagonal up
 	elif (board[6] == board[4] and board[6] == 'X'):
-		return 2
+		return 3
 	else:
 		return bMove
 		
