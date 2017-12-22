@@ -26,10 +26,10 @@ def selectPlayer(first, second, seed):
 	weightA = abs(weightA)
 	weightB = abs(weightB)
 	if (weightA > weightB):
-		print("Player 2 goes first.")
+		print("Computer goes first.")
 		return 2
 	else:
-		print("Player 1 goes first.")
+		print("You go first.")
 		return 1
 
 def checkMove(num):
@@ -124,17 +124,17 @@ def playGame():
 	global curr
 	while win == 0 and counter < 9:
 		if curr == 1:
-			aMove = int(input("Player 1 moves(1-9): "))
+			aMove = int(input("Select a move(1-9): "))
 			aMove = aMove - 1
 			while checkMove(aMove) == False:
 				print("Square already selected...")
-				aMove = int(input("Player 1 moves(1-9): "))
+				aMove = int(input("Select a move(1-9): "))
 				aMove = aMove - 1
 			board[aMove] = 'X'
 			moves.remove(aMove + 1)
 			draw()
 			if checkStatus() == True:
-				print("Congratulations, %d wins!" %curr)
+				print("Congratulations, you win!")
 				win = 1
 			curr = 2
 			counter += 1
@@ -149,7 +149,7 @@ def playGame():
 			board[bMove] = 'O'
 			draw()
 			if checkStatus() == True:
-				print("Sorry, Computer player wins!")
+				print("Sorry, Computer wins!")
 				win = 2
 			curr = 1
 			counter += 1
@@ -158,10 +158,10 @@ def playGame():
 		
 def main():
 	print("Welcome to Tic Tac Toe")
-	print("Player 1 is \"X\" and player 2 is \"O\"")
+	print("You are \"X\" and player 2 is \"O\"")
 	print("Deciding who makes the first move..")
 	while True:
-		A = int(input("Player 1 choose a number between 0 and 100: "))
+		A = int(input("Please choose a number between 0 and 100: "))
 		if (-1) < A < 101:
 			break
 		else:
